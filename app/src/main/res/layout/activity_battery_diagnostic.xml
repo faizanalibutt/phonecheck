@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/doneBatteryTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/batteryTest"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="end"
+        android:onClick="cancelTest"
+        android:text="Done"
+        android:textColor="@color/button_selector"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/batteryTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/white_bg"
+        android:padding="2dp"
+        android:text="Battery Test"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <com.upgenicsint.phonecheck.views.StartButton
+        android:id="@+id/autoPerformButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/batteryTest"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="autoPerformClick"
+        android:scaleType="centerInside"
+        android:src="@drawable/start" />
+
+    <TextView
+        android:id="@+id/editTextMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/autoPerformButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_bg"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/battery_duration_value"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/autoPerformButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/duration"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/durationInc"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:onClick="durationDecs"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="-"
+            android:textColor="@color/batterycolor"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:background="@color/batterycolor" />
+
+        <TextView
+            android:id="@+id/durationDec"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="durationIncs"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="+"
+            android:textColor="@color/batterycolor"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/circle"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBarCircle"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/drawable_circle_dark_blue"
+            android:indeterminate="false"
+            android:max="90"
+            android:progress="100"
+            android:progressDrawable="@drawable/drawable_circle_yellow_2" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/white_bg"
+        android:padding="2dp"
+        android:text="@string/battery_percentage_value_desc"
+        android:textColor="@color/dark_black"
+        android:textSize="26sp"
+        tools:ignore="HardcodedText,RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/imageViewReset"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/textViewTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_reset_24dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageViewStartStop"
+        android:layout_width="@dimen/startstop_image_size"
+        android:layout_height="@dimen/startstop_image_size"
+        android:layout_below="@+id/circle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_play_24dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/select_drain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circle"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="@string/battery_drain_text"
+        android:textColor="#3494e4"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <RadioGroup
+        android:id="@+id/drainGroup"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/select_drain"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4" />
+
+        <RadioButton
+            android:id="@+id/duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:checked="true"
+            android:text="@string/battery_duration" />
+
+        <RadioButton
+            android:id="@+id/percentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="@string/battery_percentage" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/dischgDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center|start"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/white_bg"
+        android:padding="2dp"
+        android:text="@string/btry_difference_layout"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/dischgDiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/white_bg"
+        android:gravity="center|end"
+        android:padding="2dp"
+        android:text="@string/discharge_difference_value"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText,RelativeOverlap" />
+
+    <!--only be available when debugging-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/dischgDesc"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/debugText"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/debugText1"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

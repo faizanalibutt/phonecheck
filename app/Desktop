@@ -1,0 +1,5 @@
+{
+  "APIResult": "Passed",
+  "Test": "Bluetooth,GPS,Battery,Proximity Sensor,Vibration,Power Button,Home Button,Flip Switch,Volume Up Button,Volume Down Button,Audio Test,Auto Audio,Loud Speaker,Earpiece,Headset Test,headset_rightEarpiece,headset_leftEarpiece,Microphone,video_Microphone,Camera Test,Front Camera Quality,Rear Camera Quality,Front Camera,Rear Camera,Rear Flash,Front Flash,Digitizer,LCD,Glass Condition,Fingerprint Sensor,Network Connectivity,Sim Reader,Accelerometer,Video Camera,WiFi,Menu Button,Back Button,Volume Up Button,Volume Down Button,Volume Down Button",
+  "enrollmentid": 1
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_row"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/buttonImageView"
+            android:layout_marginRight="16dp"
+            android:layout_width="@dimen/test_icon_with"
+            android:layout_height="@dimen/test_icon_height"
+            android:src="@drawable/signal_black" />
+        <com.upgenicsint.phonecheck.views.TypeFacedTextView
+            android:id="@+id/nameTextView"
+            android:text="buttons"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/earpieceStatusImageView"
+            android:layout_width="@dimen/test_status_icon_size"
+            android:layout_height="@dimen/test_status_icon_size"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="radonsoft.net.rta">
+
+    <!--<supports-screens android:largeScreens="true"-->
+        <!--android:normalScreens="true"-->
+        <!--android:smallScreens="true"-->
+        <!--android:xlargeScreens="true"/>-->
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity
+            android:name=".RTA"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+            <!--android:screenOrientation="portrait">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity android:name=".MainActivity"-->
+            <!--android:theme="@style/Theme.AppCompat"/>-->
+    </application>
+</manifest>

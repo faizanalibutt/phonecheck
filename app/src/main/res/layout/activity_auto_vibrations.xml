@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AutoVibrationActivity">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/navi_buttons"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.newventuresoftware.waveform.WaveformView
+        android:id="@+id/visualizer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:modes="RECORDING" />
+
+    <Button
+        android:id="@+id/startVibrator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Start Vibrator"
+        android:textColor="@color/dark_black"
+        android:textSize="18sp"
+        android:onClick="startVibration"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/results"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/results"
+        android:onClick="showResults"
+        app:layout_constraintBottom_toTopOf="@+id/startVibrator"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/status"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/warning"
+        android:onClick="showResults"
+        app:layout_constraintBottom_toTopOf="@+id/startVibrator"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/amplitudeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="000"
+        android:textSize="18sp"
+        android:textColor="@color/dark_black"
+        app:layout_constraintBottom_toTopOf="@+id/startVibrator"
+        app:layout_constraintEnd_toStartOf="@+id/results"
+        app:layout_constraintStart_toEndOf="@+id/status" />
+
+    <TextView
+        android:id="@+id/liveFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="56dp"
+        android:text="0.0"
+        android:textColor="@color/dark_black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveThreshold" />
+
+    <TextView
+        android:id="@+id/liveFrequency1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        android:text="Live Frequency"
+        android:textColor="@color/dark_black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveThreshold" />
+
+    <TextView
+        android:id="@+id/liveThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:text="00"
+        android:textColor="@color/dark_black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_layout" />
+
+    <TextView
+        android:id="@+id/liveThreshold1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:text="Live Threshold"
+        android:textColor="@color/dark_black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_layout" />
+
+</android.support.constraint.ConstraintLayout>

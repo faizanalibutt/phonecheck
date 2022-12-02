@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.upgenicsint.phonecheck.activities.AudioOutputTestActivity">
+
+    <include layout="@layout/navi_buttons"/>
+
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:background="@drawable/selector_row"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:id="@+id/earpieceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/earpieceImageView"
+                android:layout_width="@dimen/test_icon_with"
+                android:layout_height="@dimen/test_icon_height"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/speaker_phone" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/earpieceStatusImageView"
+                android:layout_marginRight="8dp"
+                android:layout_width="@dimen/test_status_icon_size"
+                android:layout_height="@dimen/test_status_icon_size"
+                app:srcCompat="@drawable/not_working" />
+
+            <TextView
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/earpieceImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/ear_piece"
+                android:layout_toEndOf="@id/earpieceImageView" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:alpha="0.5"
+            android:clickable="false"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/selector_row"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:id="@+id/headsetLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/headSetImageView"
+                android:layout_width="@dimen/test_icon_with"
+                android:layout_height="@dimen/test_icon_height"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/headphones" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/headsetStatusImageView"
+                android:layout_marginRight="8dp"
+                android:layout_width="@dimen/test_status_icon_size"
+                android:layout_height="@dimen/test_status_icon_size"
+                app:srcCompat="@drawable/not_working" />
+
+            <TextView
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/headSetImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/head_phones"
+                android:layout_toEndOf="@id/headSetImageView" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

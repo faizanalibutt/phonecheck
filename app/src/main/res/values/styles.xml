@@ -1,0 +1,91 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeDarkStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MainHeaderText" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/button_selector</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/test_detail_text_size</item>
+    </style>
+    <style name="BtnBackgroundText" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/button_selector</item>
+        <item name="android:textSize">@dimen/test_detail_text_size</item>
+        <item name="android:background">#EAEAEA</item>
+    </style>
+
+    <style name="AudioButtonStyle" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_width">@dimen/test_icon_with</item>
+        <item name="android:layout_height">@dimen/test_icon_height</item>
+    </style>
+
+
+    <style name="iosEditText" parent="Widget.AppCompat.EditText">
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="colorControlActivated">@android:color/transparent</item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textCursorDrawable">@null</item>
+
+    </style>
+
+<!--    <style name="CustomShowcaseTheme2" parent="ShowcaseView">
+        <item name="sv_backgroundColor">#e0000000</item>
+        <item name="sv_showcaseColor">#2278ff</item>
+        <item name="sv_buttonText">OK</item>
+        <item name="sv_titleTextAppearance">@style/CustomTitle</item>
+        <item name="sv_detailTextAppearance">@style/CustomText</item>
+    </style>
+
+    <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="CustomText" parent="TextAppearance.ShowcaseView.Detail.Light">
+        <item name="android:textColor">#8affffff</item>
+    </style>-->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="GradingStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/test_status_icon_size</item>
+        <item name="android:background">@color/gradeTitleColor</item>
+        <item name="android:paddingStart">@dimen/im_ready_margin_bottom</item>
+        <item name="android:paddingRight">@dimen/im_ready_margin_bottom</item>
+        <item name="android:textColor">@color/dark_black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingLeft">@dimen/im_ready_margin_bottom</item>
+    </style>
+
+</resources>

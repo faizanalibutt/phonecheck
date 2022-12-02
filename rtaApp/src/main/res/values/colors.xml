@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="solid_black">#ff000000</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="primary">#35518C</color>
+    <color name="primary_dark">#2B4374</color>
+    <color name="accent">#FF9800</color>
+    <color name="primary_text">#292929</color>
+    <color name="secondary_text">#727272</color>
+    <color name="list_select_color">#BBDEFB</color>
+    <color name="white_color">#ffffff</color>
+    <color name="bars">#0D47A1</color>
+    <color name="mic_text">#424242</color>
+
+    <color name="main_header_text_color">#007AFF</color>
+    <color name="main_header_text_color_unselected">#61a3ea</color>
+
+
+    <color name="colorPrimary2">#2196F3</color>
+    <color name="colorPrimaryDark2">#0D47A1</color>
+    <color name="colorAccent2">@color/button_selector</color>
+</resources>

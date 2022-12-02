@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.upgenicsint.phonecheck.activities.TimeoutActivity">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/splash_logo_padding"
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_logo" />
+    <TextView
+        android:textColor="@android:color/black"
+        android:text="@string/build_version"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedTextView
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Please visit us at www.phonecheck.com"
+        android:textColor="@android:color/black"
+        android:id="@+id/typeFacedTextView2" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        style="@style/MainHeaderText"
+        android:id="@+id/cancelButton"
+        android:text="Close Application"
+        android:onClick="closeApplication"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedTextView
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:text="You have reached the 48 hour usage limit."
+        android:layout_width="match_parent"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@+id/typeFacedTextView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/typeFacedTextView3" />
+</RelativeLayout>

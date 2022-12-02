@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5ce4e4e4">
+
+    <!-- Scrollable view here -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingBottom="8dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="top"
+            app:layout_scrollFlags="snap">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout">
+
+                    <include layout="@layout/logo_layout" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/build_version"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
+                    <ImageView
+                        android:id="@+id/sync"
+                        android:layout_width="@dimen/test_status_icon_size"
+                        android:layout_height="@dimen/test_status_icon_size"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/warning"
+                        android:visibility="invisible" />
+                    <TextView
+                        android:id="@+id/sync_results"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/sync"
+                        android:layout_toRightOf="@+id/sync"
+                        android:text="Sync..."
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/dark_black"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/phonecheckLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout2"
+                    style="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_selector"
+                    android:text="@string/phoneCheckLink"
+                    android:onClick="routePhoneCheck" />
+
+                <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                    android:id="@+id/doneTextView"
+                    style="@style/Base.TextAppearance.AppCompat.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phonecheckLink"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/test_completion"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:id="@+id/btryDiagLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/relativeLayout"
+                    android:layout_alignRight="@+id/relativeLayout"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btryDiagnos"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/battery" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diagnose"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/doneTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/totalTimeSpent"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="bottom|center"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="8dp"
+        android:onClick="showTimeActivity"
+        android:layout_marginStart="8dp" />
+
+</android.support.design.widget.CoordinatorLayout>

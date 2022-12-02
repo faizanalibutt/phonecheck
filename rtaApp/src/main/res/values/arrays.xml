@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="option_dialog_items">
+        <item>Select number of bands</item>
+        <item>Select display peak hold</item>
+        <item>Set peak mode</item>
+        <item>Set RMS/Peak/Freq option</item>
+        <item>Set Anayzer integration time</item>
+        <item>Calibration</item>
+    </array>
+    <array name="bnd_dialog_items">
+        <item>10 - one octave</item>
+        <item>20 - 1/2 octave</item>
+        <item>30 - 1/3 octave</item>
+        <item>40 - 1/4 octave</item>
+        <item>60 - 1/6 octave</item>
+        <item>120 - 1/12 octave</item>
+    </array>
+    <array name="ph_dialog_items">
+        <item>short</item>
+        <item>medium</item>
+        <item>long</item>
+    </array>
+    <array name="pm_dialog_items">
+        <item>auto release</item>
+        <item>hold maximum</item>
+    </array>
+    <array name="dm_dialog_items">
+        <item>Display Peak and RMS</item>
+        <item>Display Peak and Frequency Peak</item>
+        <item>Display RMS and Frequency Peak</item>
+    </array>
+    <array name="di_dialog_items">
+        <item>Fast</item>
+        <item>Medium</item>
+        <item>Slow</item>
+    </array>
+    <array name="calib_dialog_items">
+        <item>Start new calibration</item>
+        <item>Load previous calibration</item>
+        <item>Load standard calibration</item>
+        <item>Measure without calibration</item>
+    </array>
+    <array name="calib_modes">
+        <item>**Calibrating**</item>
+        <item>Calib.: none</item>
+        <item>Calib.: standard</item>
+        <item>Calib.: custom</item>
+    </array>
+</resources>

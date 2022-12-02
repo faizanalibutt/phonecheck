@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loudSpeakerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_row"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/test_icon_with"
+            android:layout_height="@dimen/test_icon_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/audio" />
+
+        <ImageView
+            android:id="@+id/statusImageView"
+            android:layout_width="@dimen/test_status_icon_size"
+            android:layout_height="@dimen/test_status_icon_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/not_working" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="Loud Speaker"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imageView"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/amplitudeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <TextView
+                android:id="@+id/amplitudeTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.tyorikan.voicerecordingvisualizer.VisualizerView
+        android:id="@+id/visualizer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layout1"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:background="@android:color/white"
+        app:numColumns="100"
+        app:renderColor="@color/main_header_text_color"
+        app:renderRange="both"
+        app:renderType="pixel" />
+
+</LinearLayout>

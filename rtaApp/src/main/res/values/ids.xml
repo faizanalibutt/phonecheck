@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="View01" />
+    <item type="id" name="LinearLayout01" />
+    <item type="id" name="LinearLayout03" />
+    <item type="id" name="Button01" />
+    <item type="id" name="LinearLayout04" />
+    <item type="id" name="Button02" />
+    <item type="id" name="LinearLayout05" />
+    <item type="id" name="Button03" />
+    <item type="id" name="LinearLayout06" />
+    <item type="id" name="Button04" />
+</resources>

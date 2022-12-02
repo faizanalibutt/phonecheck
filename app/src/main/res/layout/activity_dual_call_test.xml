@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    tools:context=".activities.DualCallTestActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/navi_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/call_text_size"
+        android:layout_marginRight="@dimen/call_text_size"
+        android:layout_marginBottom="8dp"
+        android:text="@string/phone_number"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/splash_text_2_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumberEditText"
+        app:layout_constraintLeft_toLeftOf="@+id/phoneNumberEditText"
+        app:layout_constraintRight_toRightOf="@+id/phoneNumberEditText" />
+
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/phone_number_hint"
+        android:inputType="phone"
+        android:textSize="@dimen/splash_text_2_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/callBtn"
+        app:layout_constraintLeft_toLeftOf="@+id/callBtn"
+        app:layout_constraintRight_toRightOf="@+id/callBtn" />
+
+    <LinearLayout
+        android:id="@+id/callBtn"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/callSim1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_call_img"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/s11"
+                    android:layout_width="@dimen/sim_icon_size"
+                    android:layout_height="@dimen/sim_icon_size"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/call_icon" />
+
+                <TextView
+                    android:id="@+id/s12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/sim_no_margin_left"
+                    android:layout_marginLeft="@dimen/sim_no_margin_left"
+                    android:layout_marginTop="@dimen/sim_no_margin_top"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/sim_1"
+                    android:textColor="@color/white_color" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/callSim2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_call_img"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/s21"
+                    android:layout_width="@dimen/sim_icon_size"
+                    android:layout_height="@dimen/sim_icon_size"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/call_icon" />
+
+                <TextView
+                    android:id="@+id/s22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/sim_no_margin_left"
+                    android:layout_marginLeft="@dimen/sim_no_margin_left"
+                    android:layout_marginTop="@dimen/sim_no_margin_top"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/sim_2"
+                    android:textColor="@color/white_color" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501"
+        app:srcCompat="@drawable/calldefault" />-->
+
+    <TextView
+        android:id="@+id/connectionStatusTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/network_connec1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/splash_text_2_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/connectionStatusImageView1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/connectionStatusImageView1" />
+
+    <ImageView
+        android:id="@+id/connectionStatusImageView1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/callBtn"
+        app:srcCompat="@drawable/warning" />
+
+    <TextView
+        android:id="@+id/simStatusTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/sim_reader1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/splash_text_2_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/simStatusImageView1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/simStatusImageView1" />
+
+    <ImageView
+        android:id="@+id/simStatusImageView1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connectionStatusImageView1"
+        app:srcCompat="@drawable/warning" />
+
+    <TextView
+        android:id="@+id/connectionStatusTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/network_connec2"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/splash_text_2_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/connectionStatusImageView2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/connectionStatusImageView2" />
+
+    <ImageView
+        android:id="@+id/connectionStatusImageView2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simStatusImageView1"
+        app:srcCompat="@drawable/warning" />
+
+    <TextView
+        android:id="@+id/simStatusTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/sim_reader2"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/splash_text_2_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/simStatusImageView2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/simStatusImageView2" />
+
+    <ImageView
+        android:id="@+id/simStatusImageView2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connectionStatusImageView2"
+        app:srcCompat="@drawable/warning" />
+
+    <TextView
+        android:id="@+id/proxStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/proximityTitle"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/splash_text_2_text_size"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/proxStatusImageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/proxStatusImageView" />
+
+    <ImageView
+        android:id="@+id/proxStatusImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simStatusTextView2"
+        app:srcCompat="@drawable/warning" />
+
+    <!--<TextView
+        android:id="@+id/s10ProximityText"
+        android:text="@string/s10proximitytext"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@+id/simStatusTextView2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="@dimen/s10proximitytextsize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />-->
+
+</android.support.constraint.ConstraintLayout>

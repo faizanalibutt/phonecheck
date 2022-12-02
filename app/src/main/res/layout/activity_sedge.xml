@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sedge"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="22dp"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.upgenicsint.phonecheck.activities.SEdgeActivity">
+    <ImageView
+        android:src="@drawable/edge_demo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedTextView
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/main_header_button_text_size"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_centerInParent="true"
+        android:text="Pop bubble from the edge of the screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <include layout="@layout/navi_buttons"/>
+</RelativeLayout>

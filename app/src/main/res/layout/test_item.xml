@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/test_bg">
+
+        <TextView
+            android:id="@+id/item_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:gravity="center|start"
+            android:padding="5dp"
+            android:text="Test List"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+</LinearLayout>

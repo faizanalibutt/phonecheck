@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_completion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.upgenicsint.phonecheck.activities.TestCompletionActivity">
+
+    <ImageView
+        android:id="@+id/splashImageView"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/splash_logo" />
+    <com.upgenicsint.phonecheck.views.TypeFacedTextView
+        android:id="@+id/doneTextView"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Please Allow All Permissions"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedTextView
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/doneTextView"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:text="If you checked never ask again then you can allow permissions from App Info Settings."
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/typeFacedTextView" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:textColor="@color/button_selector"
+        android:text="Go to App Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/typeFacedTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="appInfoButton"
+        android:id="@+id/appInfoButton" />
+</RelativeLayout>

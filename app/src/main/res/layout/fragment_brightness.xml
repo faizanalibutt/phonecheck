@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_centerInParent="true"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:text="@string/lcd_brightness"
+        />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/failBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent"
+        android:text="@string/fail"
+        android:textStyle="bold"
+        android:textColor="@color/main_header_text_color"
+        android:textSize="@dimen/splash_text_2_text_size" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/passBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:text="@string/pass"
+        android:textStyle="bold"
+        android:textColor="@color/main_header_text_color"
+        android:textSize="@dimen/splash_text_2_text_size" />
+</RelativeLayout>

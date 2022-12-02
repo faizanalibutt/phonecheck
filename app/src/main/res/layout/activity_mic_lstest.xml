@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.upgenicsint.phonecheck.activities.MicLSTestActivity">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/navi_buttons" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speakerLayout">
+
+        <LinearLayout
+            android:id="@+id/micTestLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/startButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_dark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/speakerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_row"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_layout">
+
+        <ImageView
+            android:id="@+id/earpieceImageView"
+            android:layout_width="@dimen/test_icon_with"
+            android:layout_height="@dimen/test_icon_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/audio" />
+
+        <ImageView
+            android:id="@+id/speakerStatusImageView"
+            android:layout_width="@dimen/test_status_icon_size"
+            android:layout_height="@dimen/test_status_icon_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/not_working" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/"-->
+            <!--android:layout_width="48dp"-->
+            <!--android:layout_height="48dp" />-->
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/earpieceImageView"
+            android:text="@string/loud_speaker"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

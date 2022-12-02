@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cocktail-provider
+    decription="Edge Screen Test"
+    label="Edge Test"
+    launchOnClick="com.upgenicsint.phonecheck.activities.SEdgeActivity"
+    permitVisibilityChanged="true|false"
+    previewImage="@android:color/white"
+    updatePeriodMills="1800000">
+</cocktail-provider>

@@ -1,0 +1,69 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="splash_video_width">600dp</dimen>
+    <dimen name="splash_video_margin_right">190dp</dimen>
+    <dimen name="splash_video_margin_top">50dp</dimen>
+    <dimen name="splash_video_margin_left">55dp</dimen>
+    <dimen name="im_ready_layout_height">100dp</dimen>
+    <dimen name="im_ready_button_text_size">@dimen/splash_text_2_text_size</dimen>
+    <dimen name="splash_text_1_text_size">42sp</dimen>
+    <dimen name="splash_text_2_text_size">36sp</dimen>
+    <dimen name="im_ready_check_size">40dp</dimen>
+    <dimen name="splash_image_size">100dp</dimen>
+    <dimen name="splash_image_text_size">@dimen/splash_text_2_text_size</dimen>
+    <dimen name="im_ready_margin_bottom">10dp</dimen>
+    <dimen name="splash_padding">30dp</dimen>
+    <dimen name="splash_text_2_margins">50dp</dimen>
+    <dimen name="main_header_button_text_size">@dimen/splash_text_2_text_size</dimen>
+    <dimen name="main_header_text_size">18sp</dimen>
+    <dimen name="main_header_progress_size">250dp</dimen>
+    <dimen name="test_icon_with">85dp</dimen>
+    <dimen name="test_icon_height">80dp</dimen>
+    <dimen name="test_status_icon_size">66dp</dimen>
+    <dimen name="recorder_icon_size">80dp</dimen>
+    <dimen name="waveSize">160dp</dimen>
+    <dimen name="recorder_icon_margin">85dp</dimen>
+    <dimen name="test_detail_text_size">24sp</dimen>
+    <dimen name="test_title_text_size">34sp</dimen>
+    <dimen name="header_nav_text_size">38sp</dimen>
+    <dimen name="main_header_current_task_text_size">24sp</dimen>
+    <dimen name="list_divider_size">4dp</dimen>
+    <dimen name="camera_button_size">60dp</dimen>
+    <dimen name="bubble_image_size">64dp</dimen>
+    <dimen name="bubble_image_size1">44dp</dimen>
+    <dimen name="call_activity_image_size">300dp</dimen>
+    <dimen name="splash_bg_height">@dimen/wrap_content</dimen>
+    <dimen name="newvisualizer">200dp</dimen>
+    <dimen name="mic_progressbar_size">120dp</dimen>
+    <dimen name="mic_results_size">40dp</dimen>
+    <dimen name="nfc_img_size">300dp</dimen>
+    <dimen name="progress_bar_size">30dp</dimen>
+    <dimen name="simulate_size">25dp</dimen>
+    <dimen name="startstop_image_size">50dp</dimen>
+    <dimen name="test_status_icon_size_">74dp</dimen>
+    <dimen name="wireless_charging_size">120dp</dimen>
+    <dimen name="get_started_size">38sp</dimen>
+    <dimen name="wireless_text_update">28dp</dimen>
+    <dimen name="nfc_desc_size">26sp</dimen>
+    <dimen name="charge_connected_fingerprint_text">10sp</dimen>
+    <dimen name="wireless_instructions_text">14sp</dimen>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="normal_margin">8dp</dimen>
+    <dimen name="standard_margin_2x">24dp</dimen>
+    <dimen name="standard_margin_3x">32dp</dimen>
+    <dimen name="margin_skip_btn">60dp</dimen>
+    <dimen name="margin_hardware_info_item">30dp</dimen>
+    <dimen name="dimen_anim_holder">300dp</dimen>
+    <dimen name="dialpad_size">36sp</dimen>
+    <dimen name="sim_name_text_margin">5dp</dimen>
+    <dimen name="sim_no_margin_top">5dp</dimen>
+    <dimen name="sim_no_margin_left">35dp</dimen>
+    <dimen name="sim_icon_size">50dp</dimen>
+    <dimen name="charge_connected_fingerprint_text1">14sp</dimen>
+    <dimen name="s10proximitytextsize">16sp</dimen>
+
+
+</resources>

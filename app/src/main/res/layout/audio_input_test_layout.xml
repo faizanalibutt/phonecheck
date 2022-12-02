@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loudSpeakerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_row"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/micTestBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <ProgressBar
+            android:id="@+id/micProgressBar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mic_progressbar_size"
+            android:layout_centerVertical="true"
+            android:layout_margin="-16dp"
+            android:background="@drawable/mictest_bg"
+            android:padding="1dp"
+            android:max="5000"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_progressbar"
+            android:visibility="invisible" />
+
+        <!--<View
+            android:id="@+id/micLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_centerVertical="true"
+            android:background="@color/dark_black"
+            android:visibility="gone" />-->
+
+        <!--<com.upgenicsint.phonecheck.misc.RecorderVisualizerView
+            android:id="@+id/Visualizer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/newvisualizer"
+            android:visibility="invisible"
+            android:layout_centerInParent="true" />-->
+
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/test_icon_with"
+            android:layout_height="@dimen/test_icon_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/audio" />
+
+        <ImageView
+            android:id="@+id/statusImageView"
+            android:layout_width="@dimen/test_status_icon_size"
+            android:layout_height="@dimen/test_status_icon_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/not_working" />
+
+        <ImageView
+            android:id="@+id/micRecorder"
+            android:layout_width="@dimen/recorder_icon_size"
+            android:layout_height="@dimen/recorder_icon_size"
+            android:layout_alignEnd="@id/statusImageView"
+            android:layout_alignRight="@id/statusImageView"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/recorder_icon_margin"
+            android:layout_marginRight="@dimen/recorder_icon_margin"
+            android:visibility="gone"
+            app:srcCompat="@drawable/recorder" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="Loud Speaker"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <TextView
+            android:id="@+id/amplitudeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imageView"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.tyorikan.voicerecordingvisualizer.VisualizerView
+        android:id="@+id/visualizer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:background="@android:color/white"
+        app:numColumns="100"
+        app:renderColor="@color/main_header_text_color"
+        app:renderRange="both"
+        app:renderType="pixel" />
+
+</LinearLayout>

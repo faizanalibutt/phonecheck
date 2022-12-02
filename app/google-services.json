@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "317267350128",
+    "firebase_url": "https://phonecheck-edcc0.firebaseio.com",
+    "project_id": "phonecheck-edcc0",
+    "storage_bucket": "phonecheck-edcc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317267350128:android:5a9e9a2e76fbf41c",
+        "android_client_info": {
+          "package_name": "com.upgenicsint.phonecheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317267350128-5sa11noh1r3a8k06tgsgrsfar36jkme4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.upgenicsint.phonecheck",
+            "certificate_hash": "78C967037671E490FF51783A93D5497C85ED8F17"
+          }
+        },
+        {
+          "client_id": "317267350128-shnnrjd4950nsufl73r59cu6ja93njbp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkn2X4SO3mZhAKInvegkVLT78hfLZq1SM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317267350128-shnnrjd4950nsufl73r59cu6ja93njbp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/failBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:text="@string/fail"
+        android:textColor="@color/main_header_text_color"
+        android:textSize="@dimen/splash_text_2_text_size"
+        android:textStyle="bold" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/passBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:text="@string/pass"
+        android:textColor="@color/main_header_text_color"
+        android:textSize="@dimen/splash_text_2_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lcd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="LCD?"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/failBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:text="@string/fail"
+        android:textColor="@color/main_header_text_color"
+        android:textSize="@dimen/splash_text_2_text_size"
+        android:textStyle="bold" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/passBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:text="@string/pass"
+        android:textColor="@color/main_header_text_color"
+        android:textSize="@dimen/splash_text_2_text_size"
+        android:textStyle="bold" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/failBtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/brush_pen_preview_padding"
+        android:layout_marginRight="83dp"
+        android:layout_toStartOf="@+id/lcd"
+        android:layout_toLeftOf="@+id/lcd"
+        android:background="@android:color/transparent"
+        android:text="@string/fail"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="@dimen/splash_text_2_text_size"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/passBtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/brush_pen_preview_padding"
+        android:layout_marginLeft="@dimen/brush_pen_preview_padding"
+        android:layout_toEndOf="@+id/lcd"
+        android:layout_toRightOf="@+id/lcd"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:text="@string/pass"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="@dimen/splash_text_2_text_size"
+        android:textStyle="bold" />
+
+</RelativeLayout>

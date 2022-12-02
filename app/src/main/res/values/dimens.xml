@@ -1,0 +1,85 @@
+<resources>
+    <item name="match_parent" type="dimen">-1</item>
+    <item name="wrap_content" type="dimen">-2</item>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="splash_video_width">260dp</dimen>
+    <dimen name="splash_video_margin_right">55dp</dimen>
+    <dimen name="splash_video_margin_top">50dp</dimen>
+    <dimen name="splash_video_margin_left">50dp</dimen>
+    <dimen name="im_ready_layout_height">70dp</dimen>
+    <dimen name="im_ready_button_text_size">@dimen/splash_text_2_text_size</dimen>
+    <dimen name="splash_text_1_text_size">28sp</dimen>
+    <dimen name="splash_text_2_text_size">16sp</dimen>
+    <dimen name="im_ready_check_size">@dimen/wrap_content</dimen>
+    <dimen name="splash_image_size">60dp</dimen>
+    <dimen name="splash_image_text_size">12sp</dimen>
+    <dimen name="im_ready_margin_bottom">5dp</dimen>
+    <dimen name="splash_padding">20dp</dimen>
+    <dimen name="splash_text_2_margins">20dp</dimen>
+    <dimen name="main_header_button_text_size">14sp</dimen>
+    <dimen name="main_header_text_size">18sp</dimen>
+    <dimen name="text_line_space">8dp</dimen>
+    <dimen name="main_header_progress_size">100dp</dimen>
+    <dimen name="test_icon_with">40dp</dimen>
+    <dimen name="test_icon_height">40dp</dimen>
+    <dimen name="test_status_icon_size">24dp</dimen>
+    <dimen name="test_detail_text_size">14sp</dimen>
+    <dimen name="test_title_text_size">24sp</dimen>
+    <dimen name="header_nav_text_size">28sp</dimen>
+    <dimen name="main_header_current_task_text_size">14sp</dimen>
+    <dimen name="list_divider_size">1dp</dimen>
+    <dimen name="camera_button_size">60dp</dimen>
+    <dimen name="bubble_image_size">36dp</dimen>
+    <dimen name="bubble_image_size1">22dp</dimen>
+    <dimen name="spen_hover_view_size">100dp</dimen>
+    <dimen name="ball_size">80dp</dimen>
+    <dimen name="call_activity_image_size">200dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="splash_logo_padding">20dp</dimen>
+    <dimen name="item_divider_height">8dp</dimen>
+    <dimen name="splash_bg_height">300dp</dimen>
+    <dimen name="width_qr_box_view">200dp</dimen>
+    <dimen name="dialog_edittext_padding">8dp</dimen>
+
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+    <dimen name="row_height">40dp</dimen>
+    <dimen name="recorder_icon_size">48dp</dimen>
+    <dimen name="waveSize">60dp</dimen>
+    <dimen name="recorder_icon_margin">35dp</dimen>
+    <dimen name="newvisualizer">50dp</dimen>
+    <dimen name="mic_progressbar_size">70dp</dimen>
+    <dimen name="stroke_size">1dp</dimen>
+    <dimen name="rect_baloon_size">35dp</dimen>
+    <dimen name="mic_results_size">40dp</dimen>
+    <dimen name="nfc_img_size">200dp</dimen>
+    <dimen name="arrow_size">130dp</dimen>
+    <dimen name="progress_bar_size">20dp</dimen>
+    <dimen name="call_text_size">16dp</dimen>
+    <dimen name="simulate_size">25dp</dimen>
+    <dimen name="startstop_image_size">50dp</dimen>
+    <dimen name="wireless_text_update">16dp</dimen>
+    <dimen name="test_status_icon_size_">24dp</dimen>
+    <dimen name="wireless_charging_size">150dp</dimen>
+    <dimen name="get_started_size">22sp</dimen>
+    <dimen name="nfc_desc_size">14sp</dimen>
+    <dimen name="charge_connected_fingerprint_text">18sp</dimen>
+    <dimen name="wireless_instructions_text">14sp</dimen>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="normal_margin">8dp</dimen>
+    <dimen name="standard_margin_2x">24dp</dimen>
+    <dimen name="standard_margin_3x">32dp</dimen>
+    <dimen name="margin_skip_btn">60dp</dimen>
+    <dimen name="margin_hardware_info_item">30dp</dimen>
+    <dimen name="dimen_anim_holder">300dp</dimen>
+    <dimen name="dialpad_size">36sp</dimen>
+    <dimen name="sim_name_text_margin">5dp</dimen>
+    <dimen name="sim_no_margin_top">5dp</dimen>
+    <dimen name="sim_no_margin_left">25dp</dimen>
+    <dimen name="sim_icon_size">50dp</dimen>
+    <dimen name="charge_connected_fingerprint_text1">14sp</dimen>
+    <dimen name="s10proximitytextsize">16sp</dimen>
+
+</resources>

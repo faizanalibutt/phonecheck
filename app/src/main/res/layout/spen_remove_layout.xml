@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@null"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/spenImageView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:text="Take out Spen from your device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spenTextView"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/spenImageView"
+        app:layout_constraintLeft_toLeftOf="@+id/spenImageView"
+        app:layout_constraintRight_toRightOf="@+id/spenImageView" />
+</android.support.constraint.ConstraintLayout>

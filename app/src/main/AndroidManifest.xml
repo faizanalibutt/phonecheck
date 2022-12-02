@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.upgenicsint.phonecheck">
+
+    <uses-sdk tools:overrideLibrary="com.samsung.android.spen" />
+    <!-- Connectivity -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" /> <!-- SAMSUNG SDK PERMISSION -->
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature android:name="android.hardware.nfc" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.StockCameraActivity"></activity>
+        <activity
+            android:name=".activities.RecordTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.ButtonsTestActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--
+        <service
+            android:name=".BixbyInterceptService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/service_config" />
+        </service>
+        -->
+        <activity
+            android:name=".activities.BrightnessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDarkStatusBar" />
+        <activity
+            android:name=".activities.CameraTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDarkStatusBar" />
+        <activity
+            android:name=".activities.FingerPrintActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.phonecheck.fingerprintsuccess" />
+                <action android:name="com.phonecheck.deviceadminsuccess" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SamDigitizerTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TouchTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDarkStatusBar" />
+
+        <service
+            android:name=".services.PowerListenerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".activities.SPenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sec.android.airview.HOVER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SEdgeActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".misc.EdgeSingleProvider">
+            <intent-filter>
+                <action android:name="com.samsung.android.cocktail.action.COCKTAIL_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.samsung.android.cocktail.provider"
+                android:resource="@xml/edg_single" />
+        </receiver>
+        <receiver android:name=".misc.PlugInControlReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.AccelerometerActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8a7541b37860751112b037636249cf8fd28779b1" />
+
+        <activity
+            android:name=".activities.TestCompletionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AudioTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BatteryDiagnosticActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PermissionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDarkStatusBar" />
+
+        <service
+            android:name=".services.TTSService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".activities.TimeoutActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.TestActivity" />
+
+        <receiver
+            android:name=".misc.D"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".eraser.SDCardPathReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.upgenicsint.phonecheck.sdcard_path" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.EraserActivity3"
+            android:enabled="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDarkStatusBar">
+            <intent-filter>
+                <action android:name="eraser_phonecheck_start" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.DeviceInfoService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.upgenicsint.phonecheck.device_info_service" />
+            </intent-filter>
+        </service> <!-- <service -->
+        <!-- android:name=".services.PhoneCheckAccessibilityService" -->
+        <!-- android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.accessibilityservice.AccessibilityService" /> -->
+        <!-- </intent-filter> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.accessibilityservice" -->
+        <!-- android:resource="@xml/activity_layout" /> -->
+        <!-- </service> -->
+        <activity
+            android:name=".activities.DigitizerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AudioInputTestActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".services.WiFiConnectService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.upgenicsint.phonecheck.wifi_connection_service" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.AudioOutputTestActivity"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".activities.MicTestActivity" /> -->
+        <activity
+            android:name=".barcode.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- Allow web apps to launch Barcode Scanner by linking to http://zxing.appspot.com/scan. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="zxing.appspot.com"
+                    android:path="/scan"
+                    android:scheme="http" />
+            </intent-filter>
+            <!-- We also support a Google Product Search URL. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.google.com"
+                    android:path="/m/products/scan"
+                    android:scheme="http" />
+            </intent-filter>
+            <!-- And the UK version. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.google.co.uk"
+                    android:path="/m/products/scan"
+                    android:scheme="http" />
+            </intent-filter>
+            <!-- Support zxing://scan/?... like iPhone app -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="scan"
+                    android:path="/"
+                    android:scheme="zxing" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".barcode.PreferencesActivity"
+            android:label="@string/preferences_name"
+            android:stateNotNeeded="true" />
+        <activity
+            android:name=".activities.FlashTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SpeechRecognization"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SpenButtonsTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AutoVibration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MicCheckTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MicLSTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MicESTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CosmeticsTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TestResultsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".RearBarcodeActivity" />
+        <activity
+            android:name=".activities.AudioPlaybackTestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.AudioRecordActivity" />
+        <activity
+            android:name=".activities.NewMicLSTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AmplitudeResultsDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MultiTouchTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SaveComments"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.NewMicESTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AutoVibrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.GradingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ProximityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.NFCActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/com.upgenicsint.phonecheck.activities.nfcactivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.PhoneCheckWebsiteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WirelessChargingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AutoCameraTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDarkStatusBar" />
+        <activity
+            android:name=".activities.DualCallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.DualCallTestActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".services.FingerPrintHideService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.phonecheck.hideautomation" />
+                <action android:name="com.phonecheck.showautomation" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

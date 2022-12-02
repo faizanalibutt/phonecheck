@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5ce4e4e4"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Scrollable view here -->
+
+    <android.support.design.widget.AppBarLayout
+        android:background="#fff"
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="top"
+            app:layout_scrollFlags="snap">
+
+            <include layout="@layout/layout_auto_start"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:background="#b4fdfbfb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/testRecyclerView"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/emptyView"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:alpha="0.6"
+            android:src="@drawable/ic_receipt_black_48dp"
+            android:layout_width="@dimen/test_icon_with"
+            android:layout_height="@dimen/test_icon_height"
+            android:contentDescription="@string/app_name" />
+        <com.upgenicsint.phonecheck.views.TypeFacedTextView
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:text="@string/empty_test_list"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.upgenicsint.phonecheck.views.TypeFacedButton
+            android:id="@+id/emptyRetryButton"
+            android:text="Retry"
+            style="@style/MainHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

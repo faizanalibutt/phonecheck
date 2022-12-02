@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:id="@+id/diagonal"
+        android:layout_width="@dimen/bubble_image_size"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:rotation="-32" />
+
+    <RelativeLayout
+        android:id="@+id/diagonal2"
+        android:layout_width="@dimen/bubble_image_size"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:rotation="32">
+
+        <ImageView
+            android:id="@+id/finish_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/finish_point"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+    <ImageView
+        android:id="@+id/start_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/start_logo"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/start_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@+id/start_logo"
+        android:layout_toRightOf="@+id/start_logo"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:src="@drawable/start_logo"
+        android:text="@string/start_guided_text"
+        android:textStyle="bold"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <com.upgenicsint.phonecheck.views.LineDrawView
+        android:id="@+id/lineDrawView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true" />
+
+</RelativeLayout>

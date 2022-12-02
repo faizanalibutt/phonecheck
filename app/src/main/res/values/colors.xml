@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorAccent">@color/button_selector</color>
+    <color name="splash_bg_color">#211C18</color>
+    <color name="splash_im_ready_color">#C8CED6</color>
+    <color name="main_header_text_color">#007AFF</color>
+    <color name="main_header_text_color_unselected">#61a3ea</color>
+    <color name="main_statusbar_color">@android:color/white</color>
+    <color name="list_select_color">#BBDEFB</color>
+    <color name="list_select_color_mic">#e5eff7</color>
+    <color name="list_divider_color">#d0d1d0</color>
+    <color name="alert_divider_color">#D1D1D1</color>
+    <color name="sublist_status_text_color">#424242</color>
+    <color name="sublist_status_color">@android:color/black</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+
+    <color name="colorPrimaryBtry">#3F51B5</color>
+    <color name="colorPrimaryDarkBtry">#303F9F</color>
+    <color name="colorAccentBtry">#FF4081</color>
+
+    <color name="pressed_color">#DCEDC8</color>
+    <color name="default_color">#FFFFFF</color>
+    <color name="dark_black">#222222</color>
+    <color name="batterycolor">#8EC9F9</color>
+    <color name="batterycoldor">#565656</color>
+    <color name="gradeTitleColor">#dfdbda</color>
+    <color name="gradebg">#DADADA</color>
+    <color name="blue_color">#3D7CC8</color>
+    <color name="colorDialPad">#1D7BAF</color>
+    <color name="colorTextGreen">#16a085</color>
+    <color name="colorTextResourceValue">#4c4c4c</color>
+    <color name="red">#ffcc0000</color>
+
+</resources>

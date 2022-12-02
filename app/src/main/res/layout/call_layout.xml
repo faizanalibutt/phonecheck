@@ -1,0 +1,346 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutDialPad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    android:visibility="visible">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/navi_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phoneNumberText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fontFamily="@font/candara"
+        android:gravity="center"
+        android:textColor="@color/colorTextResourceValue"
+        android:textSize="@dimen/dialpad_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/ivBackspace" />
+
+    <TableLayout
+        android:id="@+id/dialpad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_margin"
+        app:layout_constraintBottom_toTopOf="@id/callSim2">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+
+                android:gravity="center"
+                android:padding="@dimen/normal_margin"
+                android:text="1"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+            <TextView
+                android:id="@+id/tvTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+                android:gravity="center"
+
+                android:padding="@dimen/normal_margin"
+                android:text="2"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+            <TextView
+                android:id="@+id/tvThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+                android:gravity="center"
+                android:padding="@dimen/normal_margin"
+                android:text="3"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+
+                android:gravity="center"
+                android:padding="@dimen/normal_margin"
+                android:text="4"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+            <TextView
+                android:id="@+id/tvFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+
+                android:gravity="center"
+                android:padding="@dimen/normal_margin"
+                android:text="5"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+            <TextView
+                android:id="@+id/tvSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+
+                android:gravity="center"
+                android:padding="@dimen/normal_margin"
+                android:text="6"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+
+                android:gravity="center"
+                android:padding="@dimen/normal_margin"
+                android:text="7"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+            <TextView
+                android:id="@+id/tvEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+                android:gravity="center"
+
+                android:padding="@dimen/normal_margin"
+                android:text="8"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+            <TextView
+                android:id="@+id/tvNine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+
+                android:gravity="center"
+                android:padding="@dimen/normal_margin"
+                android:text="9"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvAsterik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+                android:gravity="center|center_vertical"
+                android:padding="@dimen/normal_margin"
+                android:text="*"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+            <TextView
+                android:id="@+id/tvZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+                android:gravity="center"
+                android:padding="@dimen/normal_margin"
+                android:text="0"
+                android:textColor="@color/colorDialPad"
+
+                android:textSize="@dimen/dialpad_size" />
+
+            <TextView
+                android:id="@+id/tvHash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/candara"
+                android:gravity="center"
+                android:padding="@dimen/normal_margin"
+                android:text="#"
+                android:textColor="@color/colorDialPad"
+                android:textSize="@dimen/dialpad_size" />
+
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/ivBackspace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_backspace_24dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/dialpad"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- To get ripple effect i just leave it, here you can update it -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_margin_2x"
+        android:background="@color/transparent"
+        android:fontFamily="@font/lato_bold"
+        android:onClick="callSim1"
+        android:textColor="@color/white_color"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/callSim2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fontFamily="@font/lato_bold"
+        android:onClick="callSim2"
+        android:textColor="@color/colorTextGreen"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/callSim1"
+        app:layout_constraintLeft_toRightOf="@id/callSim1"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/callSim1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_margin_2x"
+        android:background="@drawable/btn_call_img"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/callSim2">
+
+        <ImageView
+            android:id="@+id/s11"
+            android:layout_width="@dimen/sim_icon_size"
+            android:layout_height="@dimen/sim_icon_size"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/call_icon" />
+
+        <TextView
+            android:id="@+id/s12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/sim_no_margin_left"
+            android:layout_marginLeft="@dimen/sim_no_margin_left"
+            android:layout_marginTop="@dimen/sim_no_margin_top"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/sim_1"
+            android:textColor="@color/white_color" />
+
+        <!--<TextView
+            android:id="@+id/firstSim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/sim_name_text_margin"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/s12"
+            android:fontFamily="@font/lato_bold"
+            android:text="Jazz|Warid"
+            android:textColor="@color/white_color"
+            android:layout_marginEnd="@dimen/sim_name_text_margin"
+            android:layout_marginStart="@dimen/sim_name_text_margin"
+            android:layout_toEndOf="@+id/s12" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/callSim2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_call_img"
+        app:layout_constraintBottom_toBottomOf="@id/callSim1"
+        app:layout_constraintLeft_toRightOf="@id/callSim1"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/s21"
+            android:layout_width="@dimen/sim_icon_size"
+            android:layout_height="@dimen/sim_icon_size"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/call_icon" />
+
+        <TextView
+            android:id="@+id/s22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/sim_no_margin_left"
+            android:layout_marginLeft="@dimen/sim_no_margin_left"
+            android:layout_marginTop="@dimen/sim_no_margin_top"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/sim_2"
+            android:textColor="@color/white_color" />
+
+        <!--<TextView
+            android:id="@+id/secondSim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/sim_name_text_margin"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/s22"
+            android:fontFamily="@font/lato_bold"
+            android:text="No Sim"
+            android:textColor="@color/white_color"
+            android:layout_marginEnd="@dimen/sim_name_text_margin"
+            android:layout_marginStart="@dimen/sim_name_text_margin"
+            android:layout_toEndOf="@+id/s22" />-->
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true">
+
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/cameraPictureImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/solid_black"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <!--<TextView
+        android:id="@+id/rearBarcodeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cameraTakeBtn"
+        android:gravity="center"
+        android:text="No Barcode Scanned"
+        android:textColor="@color/white_color" />-->
+
+
+    <ImageButton
+        android:id="@+id/cameraTakeBtn"
+        android:layout_width="@dimen/camera_button_size"
+        android:layout_height="@dimen/camera_button_size"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/camera_btn" />
+
+    <RelativeLayout
+        android:id="@+id/pictureTakenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <com.upgenicsint.phonecheck.views.TypeFacedButton
+            android:id="@+id/failBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:text="@string/fail"
+            android:textColor="@color/main_header_text_color"
+            android:textSize="@dimen/splash_text_2_text_size"
+            android:visibility="visible" />
+
+        <com.upgenicsint.phonecheck.views.TypeFacedButton
+            android:id="@+id/passBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:text="@string/pass"
+            android:textColor="@color/main_header_text_color"
+            android:textSize="@dimen/splash_text_2_text_size"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/cameraMethodTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/navButtonsLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textColor="@color/main_header_text_color"
+        android:textSize="@dimen/splash_text_2_text_size" />
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/white_circle"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/navButtonsLayout"
+        layout="@layout/navi_buttons" />
+
+    <RelativeLayout
+        android:id="@+id/pictureTakenLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navButtonsLayout"
+        android:visibility="gone">
+
+        <com.upgenicsint.phonecheck.views.TypeFacedButton
+            android:id="@+id/failBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:text="@string/fail"
+            android:textColor="@color/main_header_text_color"
+            android:textSize="@dimen/splash_text_2_text_size"
+            android:visibility="visible" />
+
+        <com.upgenicsint.phonecheck.views.TypeFacedButton
+            android:id="@+id/passBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:text="@string/pass"
+            android:textColor="@color/main_header_text_color"
+            android:textSize="@dimen/splash_text_2_text_size"
+            android:visibility="visible"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WirelessChargingActivity">
+
+    <include
+        android:id="@+id/navi"
+        layout="@layout/navi_buttons" />
+
+    <TextView
+        android:id="@+id/get_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/get_started"
+        android:textColor="@color/dark_black"
+        android:textSize="@dimen/get_started_size"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/navi" />
+
+    <!--<TextView
+        android:id="@+id/ins1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="@string/remove_usb"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/get_started" />-->
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/wireless_text_update"
+        app:layout_constraintTop_toBottomOf="@+id/get_started">
+
+        <TextView
+            android:id="@+id/ins2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_on_wireless_pad"
+            android:textColor="@color/dark_black"
+            android:textSize="@dimen/wireless_instructions_text"
+            tools:layout_editor_absoluteX="47dp" />
+
+        <TextView
+            android:id="@+id/ins3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="@string/device_on_wireless_pad_"
+            android:textColor="@color/blue_color"
+            android:textSize="@dimen/wireless_instructions_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/l1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ins4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disconnect_device"
+            android:textColor="@color/dark_black"
+            android:textSize="@dimen/wireless_instructions_text" />
+
+        <TextView
+            android:id="@+id/ins5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="@string/power_cable"
+            android:textColor="@color/blue_color"
+            android:textSize="@dimen/wireless_instructions_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/l2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="@string/power_cable_2"
+            android:textColor="@color/blue_color"
+            android:textSize="@dimen/wireless_instructions_text" />
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tapToStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <ImageView
+            android:id="@+id/textInfo"
+            android:layout_width="@dimen/wireless_charging_size"
+            android:layout_height="@dimen/wireless_charging_size"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/wireless_charging"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.568"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498" />
+
+        <TextView
+            android:id="@+id/tapStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tap_to_start"
+            android:textColor="@color/blue_color"
+            app:layout_constraintTop_toBottomOf="@+id/textInfo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="12dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/wireless_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_black"
+        android:textSize="14sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/tapToStart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/wireless_text" />
+
+    <ImageView
+        android:id="@+id/wirelessStatus"
+        android:layout_width="@dimen/test_status_icon_size_"
+        android:layout_height="@dimen/test_status_icon_size_"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/warning"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/pictureTakenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible">
+
+        <com.upgenicsint.phonecheck.views.TypeFacedButton
+            android:id="@+id/failBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:text="@string/fail"
+            android:textColor="@color/main_header_text_color"
+            android:textSize="@dimen/splash_text_2_text_size"
+            android:visibility="visible"
+            android:layout_alignParentStart="true" />
+
+        <com.upgenicsint.phonecheck.views.TypeFacedButton
+            android:id="@+id/passBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:text="@string/pass"
+            android:textColor="@color/main_header_text_color"
+            android:textSize="@dimen/splash_text_2_text_size"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.NewMicLSTestActivity">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/navi_buttons" />
+
+    <RelativeLayout
+        android:id="@+id/speakerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_row"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_layout">
+
+        <ImageView
+            android:id="@+id/earpieceImageView"
+            android:layout_width="@dimen/test_icon_with"
+            android:layout_height="@dimen/test_icon_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/audio" />
+
+        <ImageView
+            android:id="@+id/speakerStatusImageView"
+            android:layout_width="@dimen/test_status_icon_size"
+            android:layout_height="@dimen/test_status_icon_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/not_working" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/"-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp" />-->
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@id/earpieceImageView"
+            android:text="@string/loud_speaker"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <ProgressBar
+            android:id="@+id/lsTapProgress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/progress_bar_size"
+            android:layout_height="@dimen/progress_bar_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/im_ready_margin_bottom"
+            android:layout_marginLeft="@dimen/im_ready_margin_bottom"
+            android:layout_marginEnd="@dimen/im_ready_margin_bottom"
+            android:layout_marginRight="@dimen/im_ready_margin_bottom"
+            android:layout_toStartOf="@+id/speakerStatusImageView"
+            android:layout_toLeftOf="@+id/speakerStatusImageView"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/simulateCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toStartOf="@+id/lsTapProgress"
+            android:layout_toLeftOf="@+id/lsTapProgress"
+            android:gravity="center"
+            android:checked="false"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speakerLayout">
+
+        <LinearLayout
+            android:id="@+id/micTestLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/startButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_dark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/autoSuite"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Automated Testing in-progress..."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="#00079A"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Place Down Device\nMove to Next Device"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:textColor="#62B01E"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="@dimen/arrow_size"
+            android:layout_height="@dimen/arrow_size"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/arrow" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

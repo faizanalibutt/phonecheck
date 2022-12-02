@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_battery_sub_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.upgenicsint.phonecheck.activities.CosmeticsTestActivity">
+
+    <include layout="@layout/navi_buttons" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="visible">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/cosmeticsError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Nothing to Show"
+        android:visibility="gone"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp" />
+
+</LinearLayout>

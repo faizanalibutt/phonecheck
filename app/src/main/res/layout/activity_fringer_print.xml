@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fringer_print"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.upgenicsint.phonecheck.activities.FingerPrintActivity">
+
+    <include layout="@layout/navi_buttons" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fingerImageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fingerprint_default"
+            android:contentDescription="@string/fingerprint_desc" />
+
+        <com.upgenicsint.phonecheck.views.TypeFacedTextView
+            android:id="@+id/fingerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fingerImageView"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:text="@string/fingerprint_descs"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/splash_text_2_text_size" />
+
+        <TextView
+            android:id="@+id/chargeConnectedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="@string/charge_fingerprint_text"
+            android:textColor="#F83913"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/charge_connected_fingerprint_text"
+            android:layout_above="@+id/fingerImageView" />
+        <TextView
+            android:id="@+id/chargeConnectedText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="@string/charge_fingerprint_text1"
+            android:textColor="#F83913"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/charge_connected_fingerprint_text1"
+            android:layout_below="@+id/chargeConnectedText" />
+    </RelativeLayout>
+</LinearLayout>

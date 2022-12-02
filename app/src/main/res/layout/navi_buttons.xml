@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp">
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/nav_back"
+        style="@style/MainHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="@string/back" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/nav_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/nav_buildTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/build_version"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <com.upgenicsint.phonecheck.views.TypeFacedButton
+        android:id="@+id/nav_done"
+        style="@style/MainHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:text="@string/done" />
+
+</RelativeLayout>

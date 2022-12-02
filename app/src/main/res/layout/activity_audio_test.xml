@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_audio_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.upgenicsint.phonecheck.activities.AudioTestActivity">
+
+    <include layout="@layout/navi_buttons" />
+
+    <ScrollView
+        android:visibility="visible"
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/audioPlayBackTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Audio Playback"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/main_header_text_size" />
+
+            <LinearLayout
+                android:id="@+id/testLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:background="@drawable/selector_row"
+                    android:id="@+id/loudSpeakerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/speakerImageView"
+                        android:layout_width="@dimen/test_icon_with"
+                        android:layout_height="@dimen/test_icon_height"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/speaker" />
+
+                    <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Loud Speaker"
+                        android:textColor="@android:color/black" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/speakerStatusImageView"
+                        android:layout_width="@dimen/test_status_icon_size"
+                        android:layout_height="@dimen/test_status_icon_size"
+                        android:scaleType="fitCenter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@drawable/selector_row"
+                    android:id="@+id/earphoneLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/earpieceImageView"
+                        android:layout_width="@dimen/test_icon_with"
+                        android:layout_height="@dimen/test_icon_height"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ear_speaker" />
+
+                    <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Earpiece Speaker"
+                        android:textColor="@android:color/black" />
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/earpieceStatusImageView"
+                        android:layout_width="@dimen/test_status_icon_size"
+                        android:layout_height="@dimen/test_status_icon_size"
+                        android:scaleType="fitCenter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:background="@drawable/selector_row"
+                        android:id="@+id/microphoneLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
+
+                       <LinearLayout
+                           android:orientation="horizontal"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+                           <ImageView
+                               android:id="@+id/micImageView"
+                               android:layout_width="@dimen/test_icon_with"
+                               android:layout_height="@dimen/test_icon_height"
+                               android:layout_marginRight="16dp"
+                               android:src="@drawable/mic" />
+
+                           <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center_vertical"
+                               android:layout_weight="1"
+                               android:text="Mic"
+                               android:textColor="@android:color/black" />
+                           <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                               android:id="@+id/timeTextView"
+                               android:visibility="visible"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center_vertical"
+                               android:text=""
+                               android:textColor="@android:color/black" />
+                       </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/micMiniLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/micLayout"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="8dp">
+
+                            <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                                android:id="@+id/micTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Mic"
+                                android:textColor="@android:color/black" />
+
+                            <ImageView
+                                android:id="@+id/micStatusImageView"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitCenter" />
+
+                            <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                                android:id="@+id/micStatusTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@android:color/black" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/videoMicLayout"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="8dp">
+
+                            <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                                android:id="@+id/videoMicTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Video Mic"
+                                android:textColor="@android:color/black" />
+
+                            <ImageView
+                                android:id="@+id/videoMicStatusImageView"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitCenter" />
+
+                            <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                                android:id="@+id/videoMicStatusTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@android:color/black" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <com.tyorikan.voicerecordingvisualizer.VisualizerView
+                                android:id="@+id/visualizer"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|bottom"
+                                android:layout_marginTop="@dimen/spacing_large"
+                                android:background="@android:color/white"
+                                app:numColumns="100"
+                                app:renderColor="@color/main_header_text_color"
+                                app:renderRange="both"
+                                app:renderType="pixel" />
+                            <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                                android:id="@+id/emptyVisualizerTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:visibility="visible"
+                                android:text="No data to show from microphone"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@android:color/black" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:background="@drawable/selector_row"
+                android:alpha="0.5"
+                android:clickable="false"
+                android:id="@+id/headsetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/headSetImageView"
+                    android:layout_width="@dimen/test_icon_with"
+                    android:layout_height="@dimen/test_icon_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/headset" />
+                <ImageView
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/headSetImageView"
+                    android:id="@+id/headSetStatusImageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                     />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/rightHeadSetImageView"
+                            android:layout_width="@dimen/test_icon_with"
+                            android:layout_height="@dimen/test_icon_height"
+                            android:src="@drawable/right_headset" />
+
+                        <ImageView
+                            android:id="@+id/leftHeadSetStatusImageView"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:scaleType="fitCenter"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/leftHeadSetImageView"
+                            android:layout_width="@dimen/test_icon_with"
+                            android:layout_height="@dimen/test_icon_height"
+                            android:src="@drawable/left_headset" />
+
+                        <ImageView
+                            android:id="@+id/rightHeadSetStatusImageView"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:scaleType="fitCenter" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:text="Your device Lack Text to Speech ability."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

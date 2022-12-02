@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:visibility="visible">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/nav_buttons_rta"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <radonsoft.net.rta.RtaView
+        android:id="@id/View01"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1.0"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/startTest"
+        app:layout_constraintTop_toBottomOf="@+id/micScroll"
+        app:layout_constraintVertical_bias="0.547"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@id/LinearLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@id/LinearLayout03"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@id/Button01"
+                android:layout_width="80.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center"
+                android:text="@string/color"
+                android:textSize="12.0dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/LinearLayout04"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@id/Button02"
+                android:layout_width="80.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center"
+                android:text="@string/options"
+                android:textSize="12.0dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/LinearLayout05"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@id/Button03"
+                android:layout_width="80.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center"
+                android:text="@string/stop"
+                android:textSize="12.0dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/LinearLayout06"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@id/Button04"
+                android:layout_width="80.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center"
+                android:text="Play Tone"
+                android:textSize="12.0dip" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:text="Mic Quality Test"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="16sp"-->
+        <!--android:visibility="visible"-->
+        <!--app:layout_constraintHorizontal_bias="0.502"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ScrollView
+        android:id="@+id/micScroll"
+        android:layout_width="0dp"
+        android:layout_height="226dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <LinearLayout
+            android:id="@+id/micTestLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/maxThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/startTest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/micScroll"
+        app:layout_constraintVertical_bias="0.6">
+
+        <TextView
+            android:id="@+id/headline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Default MIC"
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Max value at 1k hz: "
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/max1k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/tv1"
+            android:text="--"
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_marginTop="5dp"
+            android:text="Max value at 2k hz: "
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/max2k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/max1k"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/tv2"
+            android:text="--"
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv2"
+            android:layout_marginTop="5dp"
+            android:text="Max value at 4k hz: "
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/max4k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/max2k"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/tv3"
+            android:text="--"
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv3"
+            android:layout_marginTop="5dp"
+            android:text="Max value at 8k hz: "
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/max8k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/max4k"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/tv4"
+            android:text="--"
+            android:textColor="#424242" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/maxThreshold2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/startTest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/micScroll"
+        app:layout_constraintVertical_bias="0.6">
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Video MIC"
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/vmtv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Max value at 1k hz: "
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/vmmax1k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/vmtv1"
+            android:text="--"
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/vmtv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmtv1"
+            android:layout_marginTop="5dp"
+            android:text="Max value at 2k hz: "
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/vmmax2k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmmax1k"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/vmtv2"
+            android:text="--"
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/vmtv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmtv2"
+            android:layout_marginTop="5dp"
+            android:text="Max value at 4k hz: "
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/vmmax4k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmmax2k"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/vmtv3"
+            android:text="--"
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/vmtv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmtv3"
+            android:layout_marginTop="5dp"
+            android:text="Max value at 8k hz: "
+            android:textColor="#424242" />
+
+        <TextView
+            android:id="@+id/vmmax8k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmmax4k"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/vmtv4"
+            android:text="--"
+            android:textColor="#424242" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/startTest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_dark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

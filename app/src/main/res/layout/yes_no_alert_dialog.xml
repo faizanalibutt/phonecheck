@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/alert_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/linearLayout"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="4dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                android:text="Test"
+                android:lines="1"
+                android:id="@+id/alertTitleTextView"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <com.upgenicsint.phonecheck.views.TypeFacedTextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/alertSubTextTitleView"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="Test"
+                android:maxLines="2"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:background="@color/alert_divider_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_size"/>
+        <LinearLayout
+            android:layout_below="@id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.upgenicsint.phonecheck.views.TypeFacedButton
+                android:layout_weight="1"
+                android:id="@+id/alertPositiveBtn"
+                android:text="Yes"
+                android:textSize="@dimen/splash_text_2_text_size"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/main_header_text_color"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="@color/alert_divider_color"
+                android:layout_width="@dimen/list_divider_size"
+                android:layout_height="match_parent"/>
+            <com.upgenicsint.phonecheck.views.TypeFacedButton
+                android:layout_weight="1"
+                android:id="@+id/alertNegativeBtn"
+                android:text="No"
+                android:textSize="@dimen/splash_text_2_text_size"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/main_header_text_color"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

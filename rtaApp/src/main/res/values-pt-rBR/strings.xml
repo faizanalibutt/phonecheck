@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mic Quality</string>
+    <string name="color">Color</string>
+    <string name="options">Options</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="err">Error:</string>
+    <string name="warning">Warning:</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="wrongsf_string">This device does not support the required audio configuration.\nPlease contact support@radonsoft.net !</string>
+    <string name="lowsf_string">This device or firmware does not support 44.1 kHz audio configuration for recording. The measurement bandwidth may be limited. We recommend to check for firmware updates.</string>
+    <string name="startaudio_string">The audio engine failed to start.\nPlease contact support@radonsoft.net !</string>
+    <string name="option_title">Options</string>
+    <string name="sel_bnd">Select number of bands</string>
+    <string name="sel_pkhld">Select display peak hold</string>
+    <string name="sel_pkmode">Set peak mode</string>
+    <string name="sel_dispmode">Set RMS/Peak/Freq mode</string>
+    <string name="sel_anaint">Set Analyzer integration time</string>
+    <string name="sel_calib">Calibration Help</string>
+    <string name="cont">Continue</string>
+    <string name="calib">Calibration corrects the non linear frequency response of your phone\'s audio input (Mic, PreAmp, Filter etc.).\n\n Hit \"Continue\" for a dialog with calibration options: start a new calibration, load a previous calibration or pre-build calibration table, measure without calibration.\n\n For a proper calibration you need to supply a steady, high quality pink noise audio signal to your phone\'s microphone.\n\n If you are in a quiet environment, the background noise may work for this. For best results, however, check out our free NoiseGen to generate a file with very high quality pink noise, that can be burned to CD and played through your HiFi to supply a noise source at the target level.\n\n Once the calibration runs, wait for it to settle (usually approx. within 30s) and hit \"Stop\". Perform the calibration for each number of bands individually.</string>
+    <string name="db">[dB]</string>
+    <string name="hz">[Hz]</string>
+    <string name="khz">[kHz]</string>
+    <string name="dbfs">[dBFS]</string>
+    <string name="peak">Peak</string>
+    <string name="rms">RMS</string>
+    <string name="pfrq">PkFrq</string>
+    <string name="noisegen">NoiseGen</string>
+    <string name="calibopt">Calibration Options</string>
+    <string name="nocalib">There is no calibration data for this configuration available. Please create a new calibration or use the standard.</string>
+    <string name="buy">Buy!</string>
+    <string name="apps">RadonSoft Apps</string>
+    <string name="demotitle">Get Pro Version</string>
+    <string name="demo_string">This is the standard version of the RTA with a maximum of 30 bands and no permanent calibration option.\n\nIf you want more, consider spending €3.99 on RTA Pro which will give you:\n\n ********************************\n - 40, 60 and 120 bands \n - Permanent calibration \n - Different peak-hold times \n - Adjustable integration time \n - RMS/Peak/Freq display option \n - Full screen option \n - Freeze and Save image to File\n ********************************\n\nFor our other apps click \"RadonSoft Apps\" below.\n </string>
+
+
+    <string name="microphne">Microfone</string>
+    <string name="vid_microphne">Vídeo Microfone</string>
+    <string name="tst_incmplte">Teste Incompleto</string>
+    <string name="tst_desc">Você quer continuar?</string>
+    <string name="cntinue">Continuar</string>
+    <string name="stay">Fique</string>
+    <string name="back">Costas</string>
+    <string name="mic_quality_test">Teste de qualidade do microfone</string>
+    <string name="done">Feito</string>
+</resources>
